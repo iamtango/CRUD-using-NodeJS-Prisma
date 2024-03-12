@@ -1,0 +1,58 @@
+GET http://localhost:4000/api/users
+
+###
+GET http://localhost:4000/api/users/2
+
+###
+POST http://localhost:4000/api/users
+Content-Type: application/json
+{
+   "email": "ssddsasa",
+        "full_name": "asd",
+        "password": "s"
+}
+
+
+###
+DELETE  http://localhost:4000/api/users/1
+
+
+###
+PATCH   http://localhost:4000/api/users/3
+Content-Type: application/json
+{
+   "email": "ssddsasa",
+        "full_name": "asd",
+        "password": "s"
+}
+
+###
+GET http://localhost:4000/api/banks
+
+###
+GET http://localhost:4000/api/banks/2
+
+###
+POST http://localhost:4000/api/banks
+Content-Type: application/json
+{
+   "bank_name": "CBIndia",
+        "account_type": "current",
+        "account_number": "15145"
+}
+
+
+###
+DELETE  http://localhost:4000/api/banks/1
+
+
+###
+PATCH   http://localhost:4000/api/banks/3
+Content-Type: application/json
+{
+   "bank_name": "CBIndia",
+        "account_type": "current",
+        "account_number": "15145"
+}
+
+

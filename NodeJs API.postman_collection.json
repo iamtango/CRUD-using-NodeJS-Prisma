@@ -1,0 +1,712 @@
+{
+  "info": {
+    "_postman_id": "6545ccec-129a-4fce-acd6-01599facde4c",
+    "name": "NodeJs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21206159"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"shubh@test.com\",\r\n    \"full_name\": \"Shubham Bro\",\r\n    \"password\": \"12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/users/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "users", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoic2h1YmhAdGVzdC5jb20iLCJpYXQiOjE3MDk5OTM2NTMsImV4cCI6MTcxMDA4MDA1M30.gHd2TuLO-u9oAyi0KDcz2Xar6LdNQKRLH1chsntZw40",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/users/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "users", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoic2h1YmhAdGVzdC5jb20iLCJpYXQiOjE3MDk5OTM2NTMsImV4cCI6MTcxMDA4MDA1M30.gHd2TuLO-u9oAyi0KDcz2Xar6LdNQKRLH1chsntZw40",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "users", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User By ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ1c3Nlc3Jkc3NAdGVzc3QuY29tIiwiaWF0IjoxNzA5OTkzNTkwLCJleHAiOjE3MTAwNzk5OTB9.hJYgtjXCZl4SCyM_E6jbDAPCoZWCEHy7EGtkwIlw0tw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n            \"email\": \"shub@test.com\",\r\n            \"full_name\": \"Shubham BRO\",\r\n            \"password\": \"12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "users", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User By ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJ1c3Nlc3Jkc3NAdGVzc3QuY29tIiwiaWF0IjoxNzA5OTkzNTkwLCJleHAiOjE3MTAwNzk5OTB9.hJYgtjXCZl4SCyM_E6jbDAPCoZWCEHy7EGtkwIlw0tw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/users/6",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "users", "6"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Banks",
+      "item": [
+        {
+          "name": "Create Bank",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"bank_name\": \"ICICI\",\r\n    \"account_number\": \"364687864548\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/banks/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "banks", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Bank",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/banks/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "banks", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Bank by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/banks/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "banks", "8"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Bank by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"bank_name\": \"ICICI Bank\",\r\n    \"account_number\": \"364687864548\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/banks/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "banks", "8"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Bnak by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/banks/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "banks", "8"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "item": [
+        {
+          "name": "Create Expenses",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"title\" : \"Tea\",\r\n     \"amount\": 15\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/expenses/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "expenses", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Expenses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInRpdGxlIjoiVGVhIiwiYW1vdW50IjoxNSwiaWF0IjoxNzA5OTk0MDg5LCJleHAiOjE3MTAwODA0ODl9.6EDmFxG5khyzqvaNHtmoh65gP4wKoLA8noqb5X8aslk",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/expenses/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "expenses", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Expenses by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/expenses/4",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "expenses", "4"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Expenses by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n            \"title\": \"Tea\",\r\n            \"amount\": 12\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/expenses/21",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "expenses", "21"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Expenses by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/expenses/21",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "expenses", "21"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"new\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/categories/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "categories", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Cetegories",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/categories/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "categories", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/categories/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "categories", "8"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"dzcsd\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/api/categories/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "categories", "8"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiYWNjb3VudF9udW1iZXIiOiIzNjQ2ODc4NjQ1NDgiLCJpYXQiOjE3MDY3OTMxNzksImV4cCI6MTcwNjg3OTU3OX0.Sf34ukfiww7E_yucMAnlzDCVWQTdAldY-rN6T9hl-wo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/api/categories/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["api", "categories", "8"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "item": [
+        {
+          "name": "Create Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n            \"email\": \"ussesrds@tesst.com\",\r\n            \"full_name\": \"Light\",\r\n            \"password\": \"12345678\"\r\n        }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Login Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiSUNJQ0lAdGVzdC5jb20iLCJpYXQiOjE3MDcxMDczMjIsImV4cCI6MTcwNzE5MzcyMn0.jxYrO5-XtUoXoP0WE6iSapVW2W-7QDmjoyUy6VQAhJw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/login/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["login", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Login by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiSUNJQ0lAdGVzdC5jb20iLCJpYXQiOjE3MDcxMDczMjIsImV4cCI6MTcwNzE5MzcyMn0.jxYrO5-XtUoXoP0WE6iSapVW2W-7QDmjoyUy6VQAhJw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:6000/login/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["login", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Login by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c3NlcnNAdGVzdC5jb20iLCJpYXQiOjE3MDcxOTM4NjAsImV4cCI6MTcwNzI4MDI2MH0.oGQIrWsinCJgXcrtKESCVRuxh5Ef4JxYC3QVs46h3jM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"Vesdassss@test.com\",\r\n    \"full_name\": \"Vedang\",\r\n    \"password\": \"15874884\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/login/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["login", "3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Login by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiSUNJQ0lAdGVzdC5jb20iLCJpYXQiOjE3MDcxMDczMjIsImV4cCI6MTcwNzE5MzcyMn0.jxYrO5-XtUoXoP0WE6iSapVW2W-7QDmjoyUy6VQAhJw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"Vesdassss@test.com\",\r\n    \"full_name\": \"Vedang\",\r\n    \"password\": \"15874884\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:6000/login/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "6000",
+              "path": ["login", "2"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
